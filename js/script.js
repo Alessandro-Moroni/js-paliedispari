@@ -77,4 +77,4 @@ if(resultNumber === numeroScelto){
 
 number.innerHTML = `Hai scelto il numero ${numeroScelto} <br> 
 Il numero del pc è ${pcNumber} <br>
-${result}`
+<strong> ${result} </strong>`
