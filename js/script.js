@@ -10,7 +10,6 @@ function parolaPalindroma(string){
   return true;
 }
 
-// let parolaPalindroma = invertParola(parolaInserita);
 
 const risultatoParola = document.getElementById('word'); 
 
