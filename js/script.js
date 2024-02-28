@@ -1,4 +1,4 @@
-let parolaInserita = prompt('Inserisci una parola palindroma').toLocaleLowerCase;
+let parolaInserita = prompt('Inserisci una parola palindroma');
 
 
 function parolaPalindroma(string){
@@ -47,5 +47,34 @@ if(verifica){
 const number = document.getElementById('number');
 let numeroScelto = parseInt(prompt('Inserisci un numero da 1 a 5'));
 
+function numeroPc(min, max){
+  return Math.floor(Math.random() * (max - min + 1) +min);
+
+}
+
+let pcNumber = numeroPc(1, 5);
 
 
+function somma(numA, numB){
+  let somma = numA + numB;
+
+  if(somma % 2 === 0){
+    somma = 'pari';
+  }else{
+    somma = 'dispari';
+  }
+
+  return somma;
+}
+
+let resultNumber = somma(numeroScelto, pcNumber);
+
+if(resultNumber === numeroScelto){
+  result = 'Hai vinto!';
+}else{
+  result = 'Hai perso!';
+}
+
+number.innerHTML = `Hai scelto il numero ${numeroScelto} <br> 
+Il numero del pc è ${pcNumber} <br>
+${result}`
