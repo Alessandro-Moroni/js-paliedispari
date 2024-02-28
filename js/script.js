@@ -18,9 +18,28 @@ if(parolaInserita == parolaFinale){
 }
 
 function invertParola(string){
-  let stringeInversa = string.split('').reverse().join('');
-  return stringeInversa;
-  console.log(stringeInversa);
+  let stringInversa = string.split('').reverse().join('');
+  return stringInversa;
 }
 
+// Pari Dispari
 
+let pariDispari = prompt('Scegli pari o dispari');
+const risultato = ['pari', 'dispari'];
+let verifica = false;
+
+const risultatoScritto = document.getElementById('pari-dispari')
+
+for(let i = 0; i < risultato.length; i++){
+  if(pariDispari == risultato[i]){
+    verifica = true;
+  }
+}
+
+if(verifica){
+  alert('Buona fortuna!');
+  risultatoScritto.innerHTML = `Hai scelto <strong> ${pariDispari} </strong>`;
+
+}else{
+  alert('Devi inserire pari o dispari!')
+}
