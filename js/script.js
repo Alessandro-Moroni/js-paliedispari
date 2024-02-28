@@ -1,4 +1,4 @@
-let parolaInserita = prompt('Inserisci una parola palindroma');
+let parolaInserita = prompt('Inserisci una parola palindroma').toLocaleLowerCase;
 
 
 function parolaPalindroma(string){
@@ -10,6 +10,16 @@ function parolaPalindroma(string){
   return true;
 }
 
+// let parolaPalindroma = invertParola(parolaInserita);
+
+const risultatoParola = document.getElementById('word'); 
+
+if(parolaPalindroma(parolaInserita)){
+  risultatoParola.innerHTML = `La tua parola <strong> ${parolaInserita} </strong> è palindroma!`;
+}else{
+  alert('Inserisci una parola palindroma');
+  risultatoParola.innerHTML = `La tua parola <strong> ${parolaInserita} </strong> NON è palindroma!`;
+}
 
 
 // Pari Dispari
@@ -38,15 +48,4 @@ const number = document.getElementById('number');
 let numeroScelto = parseInt(prompt('Inserisci un numero da 1 a 5'));
 
 
-function pcNumber(min , max){
-  return min + Math.random() * (max - min);
-}
 
-
-  
-  if((numeroScelto + numeroComputer) % 2){
-    number.innerHTML = `Il risultato è <strong> pari </strong>.`;
-  }else{
-    number.innerHTML = `Il risultato è <strong> dispari </strong>.`;
-  }
-  return numeroScelto + numeroComputer;
