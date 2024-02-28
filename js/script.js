@@ -1,9 +1,7 @@
 let parolaInserita = prompt('Inserisci una parola palindroma');
 
 // const parolaUsata = parolaInserita.split('');
-
 // const parolaPalindroma = parolaUsata.reverse();
-
 // const parolaFinale = parolaPalindroma.join('');
 
 let parolaFinale = invertParola(parolaInserita);
@@ -38,8 +36,25 @@ for(let i = 0; i < risultato.length; i++){
 
 if(verifica){
   alert('Buona fortuna!');
-  risultatoScritto.innerHTML = `Hai scelto <strong> ${pariDispari} </strong>`;
+  risultatoScritto.innerHTML = `Hai scelto <strong> ${pariDispari} </strong>.`;
 
 }else{
   alert('Devi inserire pari o dispari!')
+}
+
+const number = document.getElementById('number');
+let numeroScelto = parseInt(prompt('Inserisci un numero da 1 a 5'));
+let numeroComputer = (Math.ceil(Math.random() * 5));
+// let sommaNumeri = numeroScelto + numeroComputer;
+console.log(numeroComputer);
+console.log(sommaNumeri);
+
+function sommaNumeri(numeroScelto, numeroComputer){
+  
+  if((numeroScelto + numeroComputer) % 2){
+    number.innerHTML = `Il risultato è <strong> pari </strong>.`;
+  }else{
+    number.innerHTML = `Il risultato è <strong> dispari </strong>.`;
+  }
+  return numeroScelto + numeroComputer;
 }
